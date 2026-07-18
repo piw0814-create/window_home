@@ -6,7 +6,8 @@ try - except 신경쓰기
 
     FileNotFoundError
 
-    pydantic
-        BaseModel : 타입,Field,
 
+ pydantic
+ 
+        BaseModel : 타입,Field
         try - except : validationError 설정
