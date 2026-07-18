@@ -1,12 +1,14 @@
-from dataclasses import dataclass # 반복되는 __init__을 자동으로 만들어줌
+from dataclasses import dataclass  # 반복되는 __init__을 자동으로 만들어줌
+
 
 @dataclass
 class Order:
-    name : str
+    name: str
     qty: int
-    price:int
+    price: int
 
-order = Order('사과', 3, 1000) # 생성자를 직접 안써도 필드 순서로 만듬
+
+order = Order("사과", 3, 1000)  # 생성자를 직접 안써도 필드 순서로 만듬
 print(order.name)
 print(order)
 

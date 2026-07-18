@@ -1,13 +1,14 @@
-#파일을 한 줄씩 흘려보내는 제너레이터
+# 파일을 한 줄씩 흘려보내는 제너레이터
 def read_lines(path):
-    with open(path, encoding= 'utf-8') as f:
-        for line in f: #파일 객체는 한 줄씩 순회할 수 있다
-            yield line #return이 아니라 yield: 한줄을 내주고 멈췄다 재개
+    with open(path, encoding="utf-8") as f:
+        for line in f:  # 파일 객체는 한 줄씩 순회할 수 있다
+            yield line  # return이 아니라 yield: 한줄을 내주고 멈췄다 재개
+
 
 # sum 이 제너레이터에서 한 줄 씩 받아 길이를 더한다(리스트로 전부 읽지 않음)
-total = sum(len(l) for  l in read_lines('big.log'))
+total = sum(len(l) for l in read_lines("big.log"))
 
-print('정체 글자 수 : ', total) # 수 gb 로그도 적은 메모리로 처리 가능
+print("정체 글자 수 : ", total)  # 수 gb 로그도 적은 메모리로 처리 가능
 
 
 """궁금했던 부분
